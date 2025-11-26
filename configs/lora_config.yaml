@@ -1,0 +1,15 @@
+model_name: "meta-llama/Meta-Llama-3-8B"
+dataset_name: "databricks/databricks-dolly-15k"
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+training:
+  batch_size: 4
+  learning_rate: 2e-4
+  num_epochs: 3
+  fp16: true
